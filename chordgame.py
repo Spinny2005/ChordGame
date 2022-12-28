@@ -64,7 +64,11 @@ while True:
     print("seperate the notes with spaces")
     print("Simplify notes to natural or #")
     Answer = input("")
-    while (Answer != correctAnswer):
+    while (Answer != correctAnswer) and (Answer != ""):
         Answer = input("Wrong. Try again: ")
-    print("Correct!")
+    if (Answer == correctAnswer):
+        print("Correct!")
+    elif (Answer == ""):
+        print("Chord skipped! Correct answer:")
+        print(correctAnswer)
     print("")
